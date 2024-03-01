@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+--root {
+    --fonte-emDestaque: "Source Code Pro", monospace;
+    --fonte-texto: "Oxygen", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.cabeçalho {
+    padding: 2% 0% 0% 15%
+}
+
+.cabeçalho__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.cabeçalho__menu a{
+    font-family: "Oxygen", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #22D4FD;
+    text-decoration: none;
+}
+
+/* define a animação usada anteriormente */
+@keyframes animaçãoCarregamento {
+    5% {
+      opacity: 0.05;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+
+body{
+    animation: animaçãoCarregamento ease 3s;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    padding: 5px;
+    background-color: black;
+    color: #F6F6F6;
+    transition: background-color 2s ease-in;
+}
+
+
+
+h1{
+    color: gray;
+}
+
+strong{
+    color: gray;
+}
+
+
+p{
+    color:white;
+}
+
+.tituloDestaque{
+    color: #22D4FD;
+}
+
+.flexContainer{
+    padding: 5% 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* alinhamento no flex container */
+}
+
+
+/* __ para indicar que é filho de flex container*/
+.flexContainer__conteudo{ 
+    width: 50%;  /* COPIADO DO FIGMA */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.flexContainer__conteudo__headline{
+    font-size: 2.25rem;
+    font-family: var(--fonte-emDestaque);
+}
+
+.flexContainer__conteudo__texto{
+    font-size: 1.5rem;
+    font-family: "Oxygen", sans-serif;
+}
+
+.flexContainer__links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flexContainer__links h2{
+    font-family: var(--fonte-emDestaque);
+    font-weight: 400;
+}
+
+.flexContainer__links__link{
+    background-color: black;
+    color: #F6F6F6;
+    border: 2px solid #22D4FD;
+    width: 50%;
+    border-radius: 16px;
+    margin: 5%;
+    text-align: center;
+    font-size: 24px;
+    padding: 21.5px 0;
+    text-decoration: none;
+    font-family: var(--fonte-texto);
+}
+
+.flexContainer__links__link:hover{
+    background-color: #272727;
+}
+
+.imagem{
+    width: 50%;
+}
+
+.rodape{
+    padding: 28px;
+    text-align: center;
+    background-color: gray;
+}
+
+.rodape p{
+    font-family: var(--fonte-texto);
+    color: black;
+}
+
+
+@media (max-width:  1200px){
+    .cabeçalho{
+        padding: 6%;
+    }
+
+    .flexContainer{
+        flex-direction: column-reverse;
+        padding: 5%
+    }
+
+    .flexContainer__conteudo{
+        width: auto;
+    }
+}
