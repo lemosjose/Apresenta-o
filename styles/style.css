@@ -155,3 +155,7 @@ p{
         width: auto;
     }
 }
+
+.flexContainer__conteudo p{
+    font-size: 1.5rem;
+}
